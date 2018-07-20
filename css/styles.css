@@ -1,0 +1,376 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  font-family: 'Merriweather', serif;
+  margin: 0;
+}
+
+body {
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.borderAllWalls {
+  border: 1px solid black;
+}
+
+.borderBottom {
+  border-bottom: 1px solid black;
+}
+
+.borderTopBottom {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.center {
+  text-align: center;
+}
+
+h5 {
+  font-size: 55px !important;
+}
+
+hr {
+  width: 50%;
+  height: 1px;
+  margin: 15px 0;
+  margin-left: 25%;
+  border: 0;
+  border-top: 1px solid rgb(0, 0, 0);
+}
+
+.mainGrid {
+  display: grid;
+  overflow: auto;
+  height: 100vh;
+  padding: 1%;
+  background-image: url("../Images/newspaper.jpg");
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 'titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar'
+  'titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar'
+  'narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar'
+  'leftBlockColumn leftBlockColumn leftBlockColumn leftBlockColumn narrowMiddleColumn narrowMiddleColumn rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn';
+}
+
+.narrowDateBar {
+  font-family: 'UnifrakturCook', cursive;
+  text-align: center;
+  border-bottom: none;
+  grid-area: narrowDateBar;
+}
+
+.lastColumn {
+  border-left: 1px solid black;
+  grid-area: lastColumn;
+}
+
+.LastP{
+  border-bottom: 1px solid black;
+  padding-bottom: 25px;
+}
+
+.leftBlockColumn {
+  display: grid;
+  border-bottom: none;
+  border-left: none;
+  grid-area: leftBlockColumn;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'leftBlockTitle leftBlockTitle'
+                      'leftArticleOne leftArticleTwo'
+                      'leftArticleOne leftArticleTwo'
+                      'leftArticleOne leftArticleTwo'
+                      'leftArticleOne leftArticleTwo';
+}
+
+#leftBlockTitle {
+  font-size: 50px;
+  margin-left: 10px;
+  grid-area: leftBlockTitle;
+}
+
+#leftBlockTitle:hover {
+  cursor: pointer;
+  opacity: .2;
+  grid-area: leftBlockTitle;
+}
+
+#leftArticleOne {
+  display: grid;
+  grid-area: leftArticleOne;
+}
+
+#leftArticleTwo {
+  border-right: none;
+  border-bottom: none;
+  grid-area: leftArticleTwo;
+}
+
+#leftArticleTwo:hover {
+  cursor: pointer;
+  opacity: .2;
+  grid-area: leftArticleTwo;
+}
+
+#leftArticleOne:hover {
+  cursor: pointer;
+  opacity: .2;
+  grid-area: leftArticleOne;
+}
+
+.mt {
+  margin-top: 1em;
+}
+
+.narrowDateBar{
+  text-align: center;
+}
+
+.narrowMiddleColumn {
+  border-top: 1px solid black;
+  grid-area: narrowMiddleColumn;
+}
+
+.narrowMiddleColumn:hover {
+  cursor: pointer;
+  opacity: .2;
+}
+
+#narrowTopTitle {
+  font-size: 45px !important;
+  padding: 0px 8px;
+}
+
+p {
+  font-size: 20px;
+  text-indent: 40px;
+}
+
+.pd {
+  padding: 7px;
+}
+
+
+#todayDate {
+  text-align: center;
+  font-size: 25px;
+}
+
+.rightColumn {
+  display: grid;
+  border-right: none;
+  border-bottom: none;
+  grid-area: rightColumn;
+  grid-template-columns: 70% 30%;
+  grid-template-areas: 'rightBlockTitle rightBlockTitle'
+                      'rightColImg lastColumn'
+                      'rightColImg lastColumn'
+                      'rightColImg lastColumn'
+                      'rightColImg lastColumn'
+                      'rightColImg lastColumn'
+                      'rightColImg lastColumn'
+                      'rightColImg lastColumn';
+}
+
+.rightColumn:hover {
+  cursor: pointer;
+  opacity: .2;
+}
+
+.rightBlockTitle {
+  font-size: 55px !important;
+  margin-left: 4px;
+  grid-area: rightBlockTitle;
+}
+
+.rightColImg {
+  margin: 0 8px;
+  background-image: url('../Images/hiking.png');
+  filter: grayscale(100%);
+
+  background-size: cover;
+  grid-area: rightColImg;
+}
+  #title{
+    text-shadow: 1px 1px 1px black;
+  }
+
+@media only screen and (max-width: 1482px) {
+  #leftBlockTitle {
+    font-size: 45px;
+    margin-left: .5em;
+    margin-top: 8px;
+    grid-area: leftBlockTitle;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 40px !important;
+  }
+  #leftArticleTwoTitle{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #narrowTopTitle {
+    font-size: 40px !important;
+  }
+  p {
+    font-size: 1em;
+    text-indent: 20px;
+  }
+  .rightBlockTitle {
+    font-size: 50px !important;
+    margin-left: 4px;
+    grid-area: rightBlockTitle;
+  }
+}
+
+@media only screen and (max-width: 1233px) {
+  .mainGrid {
+    display: grid;
+    overflow: auto;
+    height: 100vh;
+    padding: 1%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar'
+    'titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar'
+    'narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar'
+    'leftBlockColumn leftBlockColumn leftBlockColumn leftBlockColumn leftBlockColumn leftBlockColumn  leftBlockColumn leftBlockColumn narrowMiddleColumn narrowMiddleColumn narrowMiddleColumn narrowMiddleColumn'
+    'rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn';
+  }
+  #title {
+    font-size: 80px;
+  }
+
+  .rightColumn{
+    border-top: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .lastColumn {
+    border-left: none;
+  }
+  .mainGrid {
+    display: grid;
+    overflow: auto;
+    height: 100vh;
+    padding: 1%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar'
+    'titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar titleBar'
+     'narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar narrowDateBar'
+      'leftBlockColumn leftBlockColumn leftBlockColumn leftBlockColumn leftBlockColumn leftBlockColumn  leftBlockColumn leftBlockColumn leftBlockColumn leftBlockColumn leftBlockColumn leftBlockColumn'
+         'narrowMiddleColumn narrowMiddleColumn narrowMiddleColumn narrowMiddleColumn narrowMiddleColumn narrowMiddleColumn narrowMiddleColumn narrowMiddleColumn narrowMiddleColumn narrowMiddleColumn narrowMiddleColumn narrowMiddleColumn'
+           'rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn rightColumn';
+  }
+  nav > ul li a{
+    font-size: 20px;
+    margin: 0px 10px;
+  }
+
+  .dropbtn{
+    font-size: 20px;
+    margin: 0px 10px;
+  }
+
+  .dropdown-content {
+      min-width: 150px;
+  }
+
+  .dropdown-content a{
+    font-size: 20px;
+    padding: 10px 0px;
+
+  }
+
+  .rightBlockTitle {
+    font-size: 40px !important;
+    margin-left: 4px;
+    grid-area: rightBlockTitle;
+  }
+  .rightColumn {
+    display: grid;
+    border-right: none;
+    border-bottom: none;
+    grid-area: rightColumn;
+    grid-template-columns: 100%;
+    grid-template-areas: 'rightBlockTitle' 'lastColumn' 'rightColImg';
+  }
+  .rightColImg {
+    margin: 0 15px;
+    background-size: cover;
+    grid-area: rightColImg;
+    min-width: 250px;
+    min-height: 300px;
+  }
+  .rightColumn {
+    border-top: 1px solid black;
+    border-left: none;
+    grid-area: rightColumn;
+  }
+  .title{
+    margin-top: 10px;
+  }
+
+  .veryLastP{
+    border-bottom: none !important;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  #title {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 453px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  h5 {
+    font-size: 30px !important;
+  }
+  #leftBlockTitle {
+    font-size: 40px;
+    margin-left: .5em;
+    grid-area: leftBlockTitle;
+  }
+  #narrowTopTitle {
+    font-size: 35px !important;
+  }
+  p {
+    font-size: 1em;
+    text-indent: 20px;
+  }
+  .rightBlockTitle {
+    font-size: 30px !important;
+    margin-left: 4px;
+    grid-area: rightBlockTitle;
+  }
+  .rightColImg{
+    margin: 0 5px;
+    min-width: 225px;
+    min-height: 275px;
+  }
+  #title {
+    font-size: 70px;
+  }
+  #todayDate {
+    font-size: 20px;
+    text-align: center;
+  }
+}

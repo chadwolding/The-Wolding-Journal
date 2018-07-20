@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+.container {
+  width: 80%;
+}
+
+.enjoy {
+  margin-top: 0px;
+  align-self: center;
+}
+
+.enjoy li {
+  border-top: 2px solid black;
+  font-size: 20px;
+  padding: 2px 0px;
+}
+
+.headerGrid {
+  display: grid;
+  margin-top: 25px;
+  height: 300px;
+  grid-template-columns: 70% 30%;
+  grid-template-areas: "logoTitleContainer smallListContainer";
+  border-bottom: 5px solid black;
+}
+
+.logo {
+  display: grid;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  background-color: hsl(1, 61%, 66%);
+}
+
+#logoId {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 50px;
+  align-self: center;
+  justify-self: center;
+}
+
+.list {
+  display: grid;
+  justify-self: start;
+}
+
+#listTitle {
+  text-align: center;
+}
+
+.logoTitleContainer {
+  display: grid;
+  height: 275px;
+  align-items: center;
+  grid-template-columns: 200px 1fr;
+  grid-area: logoTitleContainer;
+  text-align: center;
+}
+
+.smallListContainer {
+  grid-area: smallListContainer;
+  display: grid;
+  height: 100px;
+}
+
+#resume {
+  border: 2px solid black;
+  width: 70%;
+  height: 100vh;
+  margin: 25px 15%;
+}
+
+
+#thisTitle {
+  margin-left: 25px;
+  align-self: start;
+  font-family: 'Merriweather', serif;
+  font-size: 100px;
+}
+
+@media only screen and (max-width: 1360px) {
+  .container {
+    width: 95%;
+  }
+  .nav {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1239px) {
+  #resume {
+    width: 85%;
+    height: 80vh;
+    margin: 25px 7.5%;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .enjoy li {
+    font-size: 17px;
+  }
+  #listTitle {
+    font-size: 25px;
+  }
+  .logo {
+    height: 175px;
+    width: 175px;
+  }
+  #logoId {
+    font-size: 40px;
+  }
+  #thisTitle {
+    margin-left: 0px;
+    font-size: 75px;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  #resume {
+    width: 98%;
+    height: 80vh;
+    margin: 25px 1%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  p {
+    padding: 0px 5px;
+  }
+}
+
+@media only screen and (max-width: 896px) {
+  #resume {
+    width: 96%;
+    height: 80vh;
+    margin: 25px 2%;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .headerGrid {
+    grid-template-columns: 1fr;
+  }
+  .smallListContainer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 589px) {
+  .logo {
+    height: 150px;
+    width: 150px;
+  }
+  #logoId {
+    font-size: 30px;
+  }
+  #thisTitle {
+    margin-left: 0px;
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .list {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logoTitleContainer {
+    display: grid;
+    height: auto;
+    grid-template-columns: 100%;
+  }
+  .logoId {
+    align-self: center;
+    text-align: center;
+  }
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

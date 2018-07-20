@@ -1,0 +1,281 @@
+@charset "UTF-8";
+.bodyContent{
+  margin-top: 0px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+justify-content: center;
+align-content: center;
+}
+
+#bodyImage{
+  height: 400px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 50px;
+margin-top: -325px;
+  border: 18px solid white;
+  filter: grayscale(50%);
+}
+
+#contactForm{
+  margin-top: -110px;
+  border-radius: 5%;
+  background-color: khaki;
+  max-width: 700px;
+  padding: 75px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 50px;
+}
+
+#contactForm > label{
+  display: inline-block;
+  margin-top: 14px;
+}
+
+.container {
+  width: 80%;
+}
+
+#imgContainer{
+  z-index: 0;
+  display: grid;
+  align-items: center;
+  border-left: 45vw solid white;
+	border-right: 45vw solid white;
+	border-top: 60vh solid transparent;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("..\\Images\\contactBackground.jpg");
+  filter: saturate(130%);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.inputErrorMessage{
+  margin-top: 2px;
+  color: red;
+}
+
+.enjoy {
+  margin-top: 0px;
+  align-self: center;
+}
+
+.enjoy li {
+  border-top: 2px solid black;
+  font-size: 20px;
+  padding: 2px 0px;
+}
+
+.headerGrid {
+  display: grid;
+  margin-top: 25px;
+  height: 300px;
+  grid-template-columns: 65% 35%;
+  grid-template-areas: "logoTitleContainer smallListContainer";
+  border-bottom: 5px solid black;
+}
+
+input[type=submit] {
+  margin-right: 5px;
+    background-color: #428bca;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  margin-top: 14px;
+}
+
+input[type=reset] {
+  margin-left: 5px;
+    background-color: #fff;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  margin-top: 14px;
+}
+
+input[type=submit]:hover, input[type=reset]:hover{
+  background-color: grey;
+    transition: 0.5s;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    height: 35px;
+    padding: 2px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical
+}
+
+.logo {
+  display: grid;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  background-color: khaki;
+}
+
+#logoId {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 50px;
+  align-self: center;
+  justify-self: center;
+}
+
+.list {
+  display: grid;
+  justify-self: start;
+}
+
+#listTitle {
+  text-align: center;
+}
+
+.logoTitleContainer {
+  display: grid;
+  height: 275px;
+  align-items: center;
+  grid-template-columns: 200px 1fr;
+  grid-area: logoTitleContainer;
+  text-align: center;
+}
+
+.smallListContainer {
+  grid-area: smallListContainer;
+  display: grid;
+  height: 100px;
+}
+
+#subject{
+  height: 150px;
+}
+
+#thisTitle {
+  margin-left: 25px;
+  align-self: start;
+  font-family: 'Merriweather', serif;
+  font-size: 100px;
+}
+
+@media only screen and (max-width: 1360px) {
+  .container {
+    width: 95%;
+  }
+  .nav {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .enjoy li {
+    font-size: 17px;
+  }
+
+  #listTitle {
+    font-size: 25px;
+  }
+  .logo {
+    height: 175px;
+    width: 175px;
+  }
+  #logoId {
+    font-size: 40px;
+  }
+  #thisTitle {
+    margin-left: 0px;
+    font-size: 75px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+
+  p {
+    padding: 0px 5px;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  form{
+    margin-top: -90px;
+    width: 86%;
+    padding: 50px;
+  }
+  .headerGrid {
+    grid-template-columns: 1fr;
+  }
+  .smallListContainer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 645px){
+  #bodyImage{
+    height: 325px;
+  margin-top: -200px;
+  }
+  #contactForm{
+    margin-top: -80px;
+    padding: 20px;
+  }
+  form{
+    margin-top: 0px;
+    width: 92%;
+    padding: 50px 25px;
+  }
+}
+
+@media only screen and (max-width: 589px) {
+  .logo {
+    height: 150px;
+    width: 150px;
+  }
+  #logoId {
+    font-size: 30px;
+  }
+  #thisTitle {
+    margin-left: 0px;
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .list {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logoTitleContainer {
+    display: grid;
+    height: auto;
+    grid-template-columns: 100%;
+  }
+  .logoId {
+    align-self: center;
+    text-align: center;
+  }
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 362px){
+  .button{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  form{
+    width: 95%;
+    padding: 50px 25px;
+  }
+}

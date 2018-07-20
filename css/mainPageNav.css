@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+.dropbtn {
+  font-family: 'UnifrakturCook', cursive;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+  margin-left: -25%;
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 15px 15px 34px 20px rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.dropdown-content a {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 25px;
+    color: black;
+    padding: 20px 0px;
+    text-decoration: none;
+    display: block;
+    border: 1px solid black;
+}
+
+.dropdown-content a:hover {
+  background-color: silver;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: silver;
+}
+
+#mainNav{
+  text-align: center;
+}
+
+.navPad{
+  margin: 0px 15px;
+}
+
+nav > ul{
+  list-style: none;
+  text-align: center;
+}
+
+nav > ul li{
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+nav > ul li a{
+    font-family: 'UnifrakturCook', cursive;
+  text-decoration: none;
+  text-align: center;
+  font-size: 30px;
+  color: black;
+}
+
+nav > ul li a:hover{
+  color: silver;
+}
+
+#title{
+  text-align: center;
+  margin-bottom: -15px;
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 120px;
+}
+
+#title a{
+  text-decoration: none;
+  color: black;
+}
+
+.titleBar {
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 10px;
+  grid-area: titleBar;
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (max-width: 1113px) {
+  #title {
+    font-size: 80px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+#contact{
+  margin-left: -5px;
+}
+
+  nav > ul li a{
+    font-size: 20px;
+  }
+
+  .dropbtn{
+    font-size: 20px;
+  }
+
+  .dropdown-content {
+      min-width: 150px;
+  }
+
+  .dropdown-content a{
+    font-size: 20px;
+    padding: 10px 0px;
+
+  }
+
+  .title{
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  #title {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 453px) {
+  #title {
+    font-size: 70px;
+  }
+  #todayDate {
+    font-size: 20px;
+    text-align: center;
+  }
+}
